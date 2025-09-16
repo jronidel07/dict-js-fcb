@@ -1,0 +1,242 @@
+body {
+	/*specifies the style or the font of our text*/
+	font-family:Arial, Helvetica, sans-serif;
+	/*text-alugn determins how text is horizontally alignes within containers*/
+	text-align: center;
+	color: #0047AB;
+}
+
+
+#board{
+	width: 400px;
+	height: 400px;
+	background-color:  #cdc1b5;
+	border: 6px solid #bbada0;
+
+	margin: 0 auto;
+
+	display:  flex;
+	flex-wrap: wrap;
+}
+
+.tile{
+	width: 90px;
+
+	height: 90px;
+
+	border:  5px solid #bbada0;
+
+	font-weight:  bold;
+
+	font-size: 25px;
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+}
+
+.x2{
+	color: rgba(0, 0, 0, 1.0);
+    background-color: #eee4da;
+	background-image: var(--background-image-url-02);
+	background-size: 100% 100%;
+	
+	}
+
+.x4{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #ece0ca;
+	background-image: var(--background-image-url-04);
+	background-size: 100% 100%;
+	
+
+    }
+
+.x8{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #f4b17a;
+	background-image: var(--background-image-url-08);
+	background-size: 100% 100%;
+	
+
+	}
+
+.x16{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #f57c5f;
+	background-image: var(--background-image-url-16);
+	background-size: 100% 100%;
+	
+
+	}
+
+.x32{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #f57c5f;
+	background-image: var(--background-image-url-32);
+	background-size: 100% 100%;
+	
+
+	}
+
+.x64{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #ff6553b;
+	background-image: var(--background-image-url-64);
+	background-size: 100% 100%;
+	
+	}
+
+
+.x128{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #edce71;
+	background-image: var(--background-image-url-128);
+	background-size: 100% 100%;
+	
+	}
+
+.x256{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #edce63;
+	background-image: var(--background-image-url-256);
+	background-size: 100% 100%;
+	
+	}
+
+.x512{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #edc744;
+	background-image: var(--background-image-url-512);
+	background-size: 100% 100%;
+	color: #white;
+	}
+
+.x1024{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #eec744;
+	background-image: var(--background-image-url-1024);
+	background-size: 100% 100%;
+	
+	}
+
+.x2048{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #eec230;
+	background-image: var(--background-image-url-2048);
+	background-size: 100% 100%;
+	
+	}
+
+.x4096{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #eec230;
+	background-image: var(--background-image-url-4096);
+	background-size: 100% 100%;
+	
+	}
+
+.x8192{
+	color: rgba(0, 0, 0, 1.0);
+	background-color: #ff2020;
+	background-image: var(--background-image-url-8192);
+	background-size: 100% 100%;
+	
+
+
+@keyframes slide-from-right{
+	0%{
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-from-top{
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100%{
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-from-bottom {
+	0% {
+		transform: translateY(100%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
+:root {
+    --background-image-url-02: url('./images/01-zuitt_2.png');
+    --background-image-url-04: url('./images/02-zuitt_4.png');
+    --background-image-url-08: url('./images/03-zuitt_8.png');
+    --background-image-url-16: url('./images/04-zuitt_16.png');
+    --background-image-url-32: url('./images/05-zuitt_32.png');
+    --background-image-url-64: url('./images/06-zuitt_64.png');
+    --background-image-url-128: url('./images/07-zuitt_128.png');
+    --background-image-url-256: url('./images/08-zuitt_256.png');
+    --background-image-url-512: url('./images/09-zuitt_512.png');
+    --background-image-url-1024: url('./images/10-zuitt_1024.png');
+    --background-image-url-2048: url('./images/11-zuitt_2048.png');
+    --background-image-url-4096: url('./images/12-zuitt_4096.png');
+    --background-image-url-8192: url('./images/13-zuitt_8192.png');
+}
+
+.container{
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+.header-container {
+	display: flex;
+	justify-content: center;
+	max-width: 100%;
+	width: 400%;
+
+	margin: 0 auto;
+}
+
+.score-container, .share-button-container{
+	margin-left: 5px;
+	margin-right: 5px;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 57px;
+	font-weight: 600px;
+}
+
+.score-container{
+	align-items: flex-start;
+}
+.score-button-container{
+	align-items: flex-end;
+
+}
+
+#score{
+	font-weight: bold;
+	font-size: 26px;
+	display: flex;
+
+
+	align-items: flex-start;
+	justify-content: end;
+
+
+}
+.sharelabel, .score-label{
+	margin-bottom: 2px;
+}
